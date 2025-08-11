@@ -2,7 +2,7 @@
   "name": "auto-date-file",
   "displayName": "AUTO DATE",
   "description": "Create C++ files named YYYYMMDD-XXX.cpp in the workspace root with a default template.",
-  "version": "0.0.4",
+  "version": "1.0.1",
   "publisher": "local",
   "license": "MIT",
   "engines": {
@@ -19,12 +19,22 @@
         "command": "autoDateFile.createFile",
         "title": "Create Date+Serial C++ File",
         "category": "Auto Date File"
+      },
+      {
+        "command": "autoDateFile.archiveCppAndOut",
+        "title": "Archive C++ Files and Out",
+        "category": "Auto Date File"
       }
     ],
     "keybindings": [
       {
         "command": "autoDateFile.createFile",
         "key": "ctrl+n ctrl+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "autoDateFile.archiveCppAndOut",
+        "key": "ctrl+n ctrl+m",
         "when": "editorTextFocus"
       }
     ],
@@ -34,6 +44,11 @@
           "command": "autoDateFile.createFile",
           "when": "true",
           "group": "navigation@1"
+        },
+        {
+          "command": "autoDateFile.archiveCppAndOut",
+          "when": "true",
+          "group": "navigation@2"
         }
       ]
     }
