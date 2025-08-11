@@ -1,0 +1,47 @@
+{
+  "name": "auto-date-file",
+  "displayName": "AUTO DATE",
+  "description": "Create C++ files named YYYYMMDD-XXX.cpp in the workspace root with a default template.",
+  "version": "0.0.3",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": ["auto date", "cpp", "c++", "serial", "file"] ,
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "autoDateFile.createFile",
+        "title": "Create Date+Serial C++ File",
+        "category": "Auto Date File"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "autoDateFile.createFile",
+          "when": "true",
+          "group": "navigation@1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "watch": "node esbuild.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://example.com/local/auto-date-file.git"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.78.0",
+  "@types/node": "^18.19.0",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.4.0"
+  }
+}
