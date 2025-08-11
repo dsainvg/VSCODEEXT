@@ -2,8 +2,9 @@
   "name": "auto-date-file",
   "displayName": "AUTO DATE",
   "description": "Create C++ files named YYYYMMDD-XXX.cpp in the workspace root with a default template.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "local",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.78.0"
   },
@@ -18,6 +19,13 @@
         "command": "autoDateFile.createFile",
         "title": "Create Date+Serial C++ File",
         "category": "Auto Date File"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "autoDateFile.createFile",
+        "key": "ctrl+n ctrl+c",
+        "when": "editorTextFocus"
       }
     ],
     "menus": {
@@ -38,6 +46,12 @@
     "type": "git",
     "url": "https://example.com/local/auto-date-file.git"
   },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@types/vscode": "^1.78.0",
   "@types/node": "^18.19.0",
